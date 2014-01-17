@@ -4,7 +4,7 @@ log = logging.getLogger(__name__)
 log.setLevel(logging.INFO)
 
 
-class board:
+class Board:
     def __init__(self, rdoc, n, px):
         self.rdoc = rdoc
         self.n = n
