@@ -426,7 +426,7 @@ class Interval:
         self.is_running = True
         # TODO: replace this with a jsfunction...
         code = self.rdoc.stringify(exp, pop_line=False)
-        code = _inline(code, level=level, rpcweakrefs=self.rdoc.rpcweakrefs)
+        code = _inline(code, level=level, rpcweakrefs=self.rdoc.jsrpcweakrefs)
         js = 'var ' + self.varname + '=setInterval(' + code + ',' + str(ms) + ');\n'
         rdoc.inline(js)
 
